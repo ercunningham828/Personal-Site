@@ -1,0 +1,33 @@
+<%= form_for @message do |message_form| %>
+  <fieldset>
+      <div class="row control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+          <%= message_form.text_field :name, class: 'form-control', placeholder: "Name" %>
+        </div>
+      </div>
+
+    
+      <div class="row control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+          <%= message_form.email_field :email,  class: 'form-control', placeholder: "Email"%>
+        </div>
+     </div>
+
+    
+      <div class="row control-group">
+          <div class="form-group col-xs-12 floating-label-form-group controls">
+            <%= message_form.text_area :content, class: 'form-control', placeholder: "Message"%>
+          </div>
+      </div>
+ 
+  </fieldset>
+    <br>
+  <fieldset>
+    <div class="row">
+    <div class="form-group col-xs-12">
+      <%= message_form.submit 'Send' ,:class => 'btn btn-success btn-lg'%>
+    </div>
+  </div>
+
+  </fieldset>
+<% end %>

@@ -11,7 +11,9 @@ group :production do
  
  group :development do
    gem 'sqlite3'
+   gem "better_errors"
  end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -24,6 +26,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'bootstrap-sass'
 gem 'jquery-easing-rails'
 gem 'font-awesome-rails'
+gem 'figaro', '1.0'
+gem "binding_of_caller"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
