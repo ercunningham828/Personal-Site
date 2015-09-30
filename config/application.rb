@@ -8,18 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Personalsite
   class Application < Rails::Application
-    if Rails.env.development?
-      ActionMailer::Base.delivery_method = :smtp
-      ActionMailer::Base.smtp_settings = {
-        address:        'smtp.sendgrid.net',
-        port:           '25',
-        authentication: :plain,
-        user_name:      ENV['SENDGRID_USERNAME'],
-        password:       ENV['SENDGRID_PASSWORD'],
-        domain:         'heroku.com',
-        enable_starttls_auto: true
-      }
-    end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
